@@ -7,8 +7,11 @@ public class UserService {
     public int getUserScore(String[] records, String email) {
 
         for (String record: records) {
-            if (record.contains(email)) {
-                return Integer.parseInt(record.substring(record.indexOf(':') + 1));
+
+            String[] userInfo = record.split(":");
+
+            if (userInfo[0].equals(email)) {
+                return Integer.parseInt(userInfo[1]);
             }
         }
 
