@@ -11,6 +11,6 @@ public class UserService {
                 return Integer.parseInt(userInfo[1]);
             }
         }
-        throw new UserNotFoundException("User with given email doesn't exist");
+        throw new UserNotFoundException("User with given email doesnt exist");
     }
 }
